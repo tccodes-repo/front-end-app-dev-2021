@@ -1,0 +1,22 @@
+@import '~scss/variables';
+
+.input {
+    outline: none;
+    appearance: none;
+    background: $color-white;
+    border: #{$input-border-width} solid #{$input-border-color};
+    box-sizing: border-box;
+    border-radius: $input-border-radius;
+    font-size: 12px;
+    padding: 10px;
+    font-family: $font-family-lato;
+    color: $color-neutral-gray-1;
+}
+
+.label {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: $font-family-lato;
+    display: block;
+    margin-bottom: 10px;
+}

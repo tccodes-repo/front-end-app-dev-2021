@@ -11,6 +11,7 @@ $color-dark-blue: #026389;
 $color-red: #bf1722;
 $color-red-dark: #9C0E18;
 $color-yellow: #e3af4a;
+$color-neutral-gray-1: #27363E;
 $color-neutral-gray-4: #B2B9BD;
 $color-neutral-gray-5: #DBDFE1;
 
@@ -43,4 +44,7 @@ $default-transition-effect: linear;
 $default-transition: #{$default-transition-time} #{$default-transition-effect};
 
 // Form Controls
-$button-border-radius: 10rem;
+$button-border-radius: 100px;
+$input-border-radius: 5px;
+$input-border-width: 1px;
+$input-border-color: $color-neutral-gray-4;
