@@ -1,0 +1,29 @@
+html,
+body {
+	font-family: $font-family-lato;
+	color: $color-gray-100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $font-family-lato;
+	margin-bottom: 0;
+	font-weight: $font-weight-regular;
+}
+
+p {
+	font-family: $font-family-lato;
+	font-weight: $font-weight-regular;
+	font-size: 1.4rem;
+	line-height: 2rem;
+}

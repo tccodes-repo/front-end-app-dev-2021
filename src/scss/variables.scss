@@ -1,0 +1,46 @@
+// Colors
+
+$color-green: #43C365;
+$color-green-light: #9FE2B1;
+$color-green-dark: #2D9B4A;
+$color-green-gradient: linear-gradient(90deg, #43c365 6.12%, #84d660 100%);
+$color-green-gradient-hover: linear-gradient(90deg, #39b259 6.12%, #58b72f 100%);
+
+$color-blue: #0079a8;
+$color-dark-blue: #026389;
+$color-red: #bf1722;
+$color-red-dark: #9C0E18;
+$color-yellow: #e3af4a;
+$color-neutral-gray-4: #B2B9BD;
+$color-neutral-gray-5: #DBDFE1;
+
+$color-white: #fff;
+
+$color-gray-100: #000;
+$color-gray-90: lighten($color-gray-100, 10%);
+$color-gray-80: lighten($color-gray-100, 20%);
+$color-gray-70: lighten($color-gray-100, 35%);
+$color-gray-60: lighten($color-gray-100, 40%);
+$color-gray-50: lighten($color-gray-100, 50%);
+$color-gray-40: lighten($color-gray-100, 60%);
+$color-gray-30: lighten($color-gray-100, 70%);
+$color-gray-20: lighten($color-gray-100, 80%);
+$color-gray-10: lighten($color-gray-100, 90%);
+
+$color-neutral-gray-1: #27363e;
+
+// Typography
+$font-family-lato: 'Lato', Arial, sans-serif;
+$font-family-dm-serif: 'DM Serif Display', Tahoma, sans-serif;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Animations
+$default-transition-time: 0.3s;
+$default-transition-effect: linear;
+$default-transition: #{$default-transition-time} #{$default-transition-effect};
+
+// Form Controls
+$button-border-radius: 10rem;
