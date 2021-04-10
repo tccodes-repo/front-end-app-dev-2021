@@ -1,0 +1,23 @@
+@import '~scss/variables';
+
+.footer {
+	width: 100%;
+	padding: 20px;
+}
+
+.topFooter {
+	background: $footer-top-color;
+}
+
+.topFooterLayout {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.bottomFooter {
+	width: 100%;
+	text-align: center;
+	background: $color-neutral-gray-1;
+}

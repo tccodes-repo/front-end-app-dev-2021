@@ -1,0 +1,16 @@
+.nav {
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #000;
+	box-sizing: border-box;
+}
+
+.accountMenu {
+	li {
+		display: inline-block;
+		list-style: none;
+	}
+}
