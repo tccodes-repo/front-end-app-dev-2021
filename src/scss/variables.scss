@@ -1,42 +1,44 @@
-// Colors
+// Font Families
+$font-family-lato: 'Lato', 'sans-serif';
+$font-family-dm-serif: 'DM Serif Display', 'serif';
 
-$color-green: #43C365;
-$color-green-light: #9FE2B1;
-$color-green-dark: #2D9B4A;
-$color-green-gradient: linear-gradient(90deg, #43c365 6.12%, #84d660 100%);
-$color-green-gradient-hover: linear-gradient(90deg, #39b259 6.12%, #58b72f 100%);
-
-$color-blue: #0079a8;
-$color-dark-blue: #026389;
-$color-red: #bf1722;
-$color-red-dark: #9C0E18;
-$color-yellow: #e3af4a;
-$color-neutral-gray-1: #27363E;
-$color-neutral-gray-4: #B2B9BD;
-$color-neutral-gray-5: #DBDFE1;
-
-$color-white: #fff;
-
-$color-gray-100: #000;
-$color-gray-90: lighten($color-gray-100, 10%);
-$color-gray-80: lighten($color-gray-100, 20%);
-$color-gray-70: lighten($color-gray-100, 35%);
-$color-gray-60: lighten($color-gray-100, 40%);
-$color-gray-50: lighten($color-gray-100, 50%);
-$color-gray-40: lighten($color-gray-100, 60%);
-$color-gray-30: lighten($color-gray-100, 70%);
-$color-gray-20: lighten($color-gray-100, 80%);
-$color-gray-10: lighten($color-gray-100, 90%);
-
-$color-neutral-gray-1: #27363e;
-
-// Typography
-$font-family-lato: 'Lato', Arial, sans-serif;
-$font-family-dm-serif: 'DM Serif Display', Tahoma, sans-serif;
-
-$font-weight-light: 300;
+// Font Weights
+$font-weight-light: 100;
 $font-weight-regular: 400;
+$font-weight-senmiBold: 600;
 $font-weight-bold: 700;
+
+// Colors
+$color-green-light: #9fe2b1;
+$color-green: #43c365;
+$color-green-dark: #2d9b4a;
+$color-red-light: #e18a8f;
+$color-red: #bf1722;
+$color-red-dark: #9c0e18;
+$color-blue-light: #48c9db;
+$color-blue: #0079a8;
+$color-blue-dark: #026389;
+$color-yellow: #e3af4a;
+$color-purple: #3c3e9f;
+$color-neutural-gray-1: #27363e;
+$color-neutural-gray-2: #3b4c54;
+$color-neutural-gray-3: #64747d;
+$color-neutural-gray-4: #b2b9bd;
+$color-neutural-gray-5: #dbdfe1;
+$color-neutural-gray-6: #f7f8f8;
+$color-neutural-gray-7: #fcfcfc;
+$color-white: #fff;
+$color-black: #000;
+$color-transparent: transparent;
+
+$box-shadow-small: 0px 4px 8px rgba(0, 0, 0, 0.06);
+$box-shadow-large: rgba(9, 30, 66, 0.13) 0px 4px 11px;
+
+$border-radius: 0.5rem;
+$border-radius-large: 1rem;
+
+// Layout
+$container-width: 1328px;
 
 // Animations
 $default-transition-time: 0.3s;
@@ -51,4 +53,3 @@ $input-border-color: $color-neutral-gray-4;
 
 // Footer
 $footer-top-color: #34454C;
-
