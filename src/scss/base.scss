@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 html {
-	box-sizing: border-box;
+	// box-sizing: border-box;
+	font-size: 62.5%;
 }
 
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
+// *,
+// *:before,
+// *:after {
+// 	box-sizing: border-box;
+// }
 
 body {
 	min-height: 100vh;

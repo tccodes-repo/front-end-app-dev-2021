@@ -1,9 +1,28 @@
-.mainNavigation {
+@import '~scss/variables';
+
+.navLinks {
 	li {
 		display: inline-block;
-		margin-right: 20px;
+		margin-right: 8rem;
 		&:last-child {
 			margin-right: 0;
+		}
+	}
+
+	a {
+		font-size: $font-size-16;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: $default-transition;
+		color: $color-neutral-gray-1;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&.light {
+		a {
+			color: $color-white;
 		}
 	}
 }
