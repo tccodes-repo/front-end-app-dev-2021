@@ -1,0 +1,14 @@
+@import '~scss/variables';
+
+.panel {
+	padding: 4rem;
+	border-radius: $border-radius-large;
+	box-shadow: $box-shadow-large;
+	h3,
+	h4 {
+		margin-top: 0;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+		font-family: $font-family-lato;
+	}
+}

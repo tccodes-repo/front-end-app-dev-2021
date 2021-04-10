@@ -2,11 +2,11 @@ import React from 'react';
 import classes from 'classnames';
 import css from './Navigation.module.scss';
 
-interface NavigationProps {
+interface INavigationProps {
 	themeColor?: 'light' | 'dark';
 }
 
-export const Navigation: React.FC<NavigationProps> = props => {
+export const Navigation: React.FC<INavigationProps> = props => {
 	const { themeColor = 'dark' } = props;
 
 	return (
