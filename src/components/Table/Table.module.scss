@@ -1,0 +1,46 @@
+@import '~scss/variables';
+
+.tableDom {
+	border: none;
+	border-spacing: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.tr {
+	&:first-child {
+		.th:first-child {
+			border-top-left-radius: $border-radius;
+		}
+		.th:last-child {
+			border-top-right-radius: $border-radius;
+		}
+	}
+	.td {
+		background: $color-neutral-gray-6;
+	}
+	&:nth-of-type(odd) {
+		.td {
+			background: $color-neutral-gray-7;
+		}
+	}
+}
+
+.td,
+.th {
+	padding: 1.4rem 2rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	border-bottom: 0.1rem solid $color-white;
+	text-align: left;
+}
+
+.td {
+	vertical-align: top;
+}
+
+.th {
+	background: #dadfe1;
+	font-weight: $font-weight-bold;
+}
