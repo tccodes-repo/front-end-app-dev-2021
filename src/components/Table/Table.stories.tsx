@@ -12,7 +12,7 @@ export default {
 	// },
 } as Meta;
 
-export const Examples = () => {
+export const DefaultTable = () => {
 	const data = React.useMemo(
 		() => [
 			{
