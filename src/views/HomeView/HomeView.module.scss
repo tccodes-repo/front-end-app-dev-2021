@@ -1,0 +1,11 @@
+@import '~scss/variables';
+
+.overviewPanels {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.overviewPanel {
+	width: 20%;
+}

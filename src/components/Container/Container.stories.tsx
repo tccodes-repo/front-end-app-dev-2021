@@ -3,8 +3,10 @@ import { Meta } from '@storybook/react/types-6-0';
 import { Container } from './Container';
 
 export default {
-  title: 'Example/Container',
-  component: Container
+	title: 'Example/Container',
+	component: Container
 } as Meta;
 
-export const AppSection = () => <Container>This is a container and will include the bounding grid max-width</Container>
+export const ContentContainer = () => (
+	<Container>This is a container and will include the bounding grid max-width</Container>
+);
