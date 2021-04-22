@@ -11,7 +11,7 @@ export const PageFrame: React.FC<IPageFrame> = props => {
 	const { title, ContentRight, children } = props;
 
 	return (
-		<main>
+		<main className={css.main}>
 			<Container className={css.container}>
 				<h1 className={css.pageFrameTitle}>{title}</h1>
 				{ContentRight && <ContentRight />}

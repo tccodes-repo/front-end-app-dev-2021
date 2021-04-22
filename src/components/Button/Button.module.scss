@@ -5,7 +5,7 @@
 	background: $color-neutral-gray-5;
 	color: $color-neutral-gray-1;
 	transition: $default-transition;
-	padding: 14px;
+	padding: 1.4rem 2.5rem;
 	font-family: $font-family-lato;
 	font-size: 16px;
 	text-align: center;
@@ -21,7 +21,7 @@
 }
 
 .success {
-	transition: .3s linear;
+	transition: 0.3s linear;
 	background: $color-green;
 	&:hover {
 		background: $color-green-dark;

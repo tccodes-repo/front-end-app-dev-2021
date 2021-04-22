@@ -6,6 +6,7 @@ import { Table } from 'components/Table';
 import { PageFrame } from 'components/AppFrame/PageFrame/PageFrame';
 import { Section } from 'components/Section';
 import { Button } from 'components/Button';
+import { CellValue } from 'react-table';
 
 export const RecipientsLanding: React.FC = props => {
 	const data = React.useMemo(
@@ -13,17 +14,17 @@ export const RecipientsLanding: React.FC = props => {
 			{
 				name: 'Example Person 1',
 				email: 'example1@example.com',
-				remove: () => <a href='#'>Remove</a>
+				removeLabel: 'remove'
 			},
 			{
 				name: 'Example Person 2',
 				email: 'example2@example.com',
-				remove: () => <a href='#'>Remove</a>
+				removeLabel: 'remove'
 			},
 			{
 				name: 'Example Person 3',
 				email: 'example3@example.com',
-				remove: () => <a href='#'>Remove</a>
+				removeLabel: 'remove'
 			}
 		],
 		[]
@@ -41,7 +42,8 @@ export const RecipientsLanding: React.FC = props => {
 			},
 			{
 				Header: 'Remove',
-				accessor: 'remove'
+				accessor: 'removeLabel',
+				Cell: (row: CellValue) => <a href='#'>{row.value}</a>
 			}
 		],
 		[]

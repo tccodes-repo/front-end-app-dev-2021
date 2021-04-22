@@ -1,11 +1,10 @@
 import React from 'react';
-import classes from 'classnames';
 import css from './MainNavigation.module.scss';
 import { Navigation } from '../Navigation';
 import IconAccount from 'assets/icon-account.png';
 import { Logo } from '../Logo/Logo';
 
-export const MainNavigation: React.FC = props => {
+export const MainNavigation: React.FC = () => {
 	return (
 		<nav className={css.nav}>
 			<Logo />

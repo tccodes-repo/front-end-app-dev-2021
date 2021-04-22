@@ -6,6 +6,7 @@ import { Table } from 'components/Table';
 import { PageFrame } from 'components/AppFrame/PageFrame/PageFrame';
 import { Section } from 'components/Section';
 import { Button } from 'components/Button';
+import { CellValue } from 'react-table';
 
 export const TemplatesLanding: React.FC = props => {
 	const data = React.useMemo(
@@ -17,12 +18,12 @@ export const TemplatesLanding: React.FC = props => {
 			{
 				name: 'Template 2',
 				status: false,
-				remove: () => <a href='#'>Remove</a>
+				removeLabel: 'remove'
 			},
 			{
 				name: 'Template 3',
 				status: false,
-				remove: () => <a href='#'>Remove</a>
+				removeLabel: 'remove'
 			}
 		],
 		[]
@@ -40,7 +41,8 @@ export const TemplatesLanding: React.FC = props => {
 			},
 			{
 				Header: 'Remove',
-				accessor: 'remove'
+				accessor: 'removeLabel',
+				Cell: (row: CellValue) => <a href='#'>{row.value}</a>
 			}
 		],
 		[]
