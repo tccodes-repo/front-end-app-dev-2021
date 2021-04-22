@@ -50,8 +50,7 @@
 		],
 		"rules": {
 			"no-restricted-imports": [
-				"error",
-				"react-router-dom"
+				"error"
 			],
 			"space-before-function-paren": [
 				"error",

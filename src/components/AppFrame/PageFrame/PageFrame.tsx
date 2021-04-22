@@ -4,15 +4,17 @@ import { Container } from 'components/Container';
 
 interface IPageFrame {
 	title: string;
+	ContentRight?: React.FC;
 }
 
 export const PageFrame: React.FC<IPageFrame> = props => {
-	const { title, children } = props;
+	const { title, ContentRight, children } = props;
 
 	return (
 		<main>
-			<Container>
-				<h1>{title}</h1>
+			<Container className={css.container}>
+				<h1 className={css.pageFrameTitle}>{title}</h1>
+				{ContentRight && <ContentRight />}
 			</Container>
 			{children}
 		</main>

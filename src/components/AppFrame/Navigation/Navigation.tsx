@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import classes from 'classnames';
 import css from './Navigation.module.scss';
 
@@ -12,16 +13,24 @@ export const Navigation: React.FC<INavigationProps> = props => {
 	return (
 		<ul className={classes(css.navLinks, css[themeColor])}>
 			<li>
-				<a href='#'>Overview</a>
+				<NavLink to='/' exact activeClassName={css.current}>
+					Overview
+				</NavLink>
 			</li>
 			<li>
-				<a href='#'>Emails</a>
+				<NavLink to='/emails' activeClassName={css.current}>
+					Emails
+				</NavLink>
 			</li>
 			<li>
-				<a href='#'>Recipients</a>
+				<NavLink to='/recipients' activeClassName={css.current}>
+					Recipients
+				</NavLink>
 			</li>
 			<li>
-				<a href='#'>Templates</a>
+				<NavLink to='/templates' activeClassName={css.current}>
+					Templates
+				</NavLink>
 			</li>
 		</ul>
 	);

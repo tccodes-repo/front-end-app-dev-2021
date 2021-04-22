@@ -13,7 +13,7 @@ export default {
 } as Meta;
 
 export const MainAppFrame = () => (
-	<AppFrame title='Header 1'>
+	<AppFrame>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis modi vero minima corrupti vitae
 			iste officia voluptatum maxime unde exercitationem architecto et, ad neque odio fugiat sint. Sunt
