@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { AppFrame } from 'components/AppFrame';
 import { Container } from 'components/Container';
 import { Panel } from 'components/Panel';
@@ -8,21 +9,23 @@ import { Section } from 'components/Section';
 import { Button } from 'components/Button';
 import { CellValue } from 'react-table';
 
-export const TemplatesLanding: React.FC = props => {
+export const Recipients: React.FC = props => {
+	const history = useHistory();
 	const data = React.useMemo(
 		() => [
 			{
-				name: 'Template 1',
-				status: true
-			},
-			{
-				name: 'Template 2',
-				status: false,
+				name: 'Example Person 1',
+				email: 'example1@example.com',
 				removeLabel: 'remove'
 			},
 			{
-				name: 'Template 3',
-				status: false,
+				name: 'Example Person 2',
+				email: 'example2@example.com',
+				removeLabel: 'remove'
+			},
+			{
+				name: 'Example Person 3',
+				email: 'example3@example.com',
 				removeLabel: 'remove'
 			}
 		],
@@ -36,8 +39,8 @@ export const TemplatesLanding: React.FC = props => {
 				accessor: 'name' // accessor is the "key" in the data
 			},
 			{
-				Header: 'In Use',
-				accessor: 'status'
+				Header: 'Email',
+				accessor: 'email'
 			},
 			{
 				Header: 'Remove',
@@ -51,8 +54,12 @@ export const TemplatesLanding: React.FC = props => {
 	return (
 		<AppFrame>
 			<PageFrame
-				title={'Templates'}
-				ContentRight={() => <Button buttonType='success'>New Template</Button>}
+				title={'Recipients'}
+				ContentRight={() => (
+					<Button buttonType='success' onClick={() => history.push('/recipients/recipient')}>
+						New Recipient
+					</Button>
+				)}
 			>
 				<Section>
 					<Container>

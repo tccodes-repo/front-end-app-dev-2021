@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { AppFrame } from 'components/AppFrame';
 import { Container } from 'components/Container';
 import { Panel } from 'components/Panel';
@@ -6,25 +7,25 @@ import { Table } from 'components/Table';
 import { PageFrame } from 'components/AppFrame/PageFrame/PageFrame';
 import { Section } from 'components/Section';
 import { Button } from 'components/Button';
-import { CellValue } from 'react-table';
 
-export const RecipientsLanding: React.FC = props => {
+export const Emails: React.FC = props => {
+	const history = useHistory();
 	const data = React.useMemo(
 		() => [
 			{
-				name: 'Example Person 1',
-				email: 'example1@example.com',
-				removeLabel: 'remove'
+				name: 'Introduction Email',
+				dateSent: '2020/04/21',
+				status: 'Sent'
 			},
 			{
-				name: 'Example Person 2',
-				email: 'example2@example.com',
-				removeLabel: 'remove'
+				name: 'April News Letter',
+				dateSent: '2020/04/01',
+				status: 'Sent'
 			},
 			{
-				name: 'Example Person 3',
-				email: 'example3@example.com',
-				removeLabel: 'remove'
+				name: 'March News Letter',
+				dateSent: '2020/03/01',
+				status: 'Sent'
 			}
 		],
 		[]
@@ -37,13 +38,12 @@ export const RecipientsLanding: React.FC = props => {
 				accessor: 'name' // accessor is the "key" in the data
 			},
 			{
-				Header: 'Email',
-				accessor: 'email'
+				Header: 'Date Sent',
+				accessor: 'dateSent'
 			},
 			{
-				Header: 'Remove',
-				accessor: 'removeLabel',
-				Cell: (row: CellValue) => <a href='#'>{row.value}</a>
+				Header: 'Status',
+				accessor: 'status'
 			}
 		],
 		[]
@@ -52,8 +52,12 @@ export const RecipientsLanding: React.FC = props => {
 	return (
 		<AppFrame>
 			<PageFrame
-				title={'Recipients'}
-				ContentRight={() => <Button buttonType='success'>New Recipient</Button>}
+				title={'Emails'}
+				ContentRight={() => (
+					<Button buttonType='success' onClick={() => history.push('/emails/email')}>
+						New Email
+					</Button>
+				)}
 			>
 				<Section>
 					<Container>
