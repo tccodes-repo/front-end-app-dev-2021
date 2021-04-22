@@ -4,6 +4,7 @@ import { Container } from 'components/Container';
 import { Panel } from 'components/Panel';
 import { Table } from 'components/Table';
 import { PageFrame } from 'components/AppFrame/PageFrame/PageFrame';
+import { Section } from 'components/Section';
 import { Button } from 'components/Button';
 
 export const TemplatesLanding: React.FC = props => {
@@ -51,11 +52,13 @@ export const TemplatesLanding: React.FC = props => {
 				title={'Templates'}
 				ContentRight={() => <Button buttonType='success'>New Template</Button>}
 			>
-				<Container>
-					<Panel>
-						<Table columns={columns} data={data} />
-					</Panel>
-				</Container>
+				<Section>
+					<Container>
+						<Panel>
+							<Table columns={columns} data={data} />
+						</Panel>
+					</Container>
+				</Section>
 			</PageFrame>
 		</AppFrame>
 	);
