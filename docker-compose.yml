@@ -25,6 +25,8 @@ services:
       context: ./api
     ports:
       - '8088:80'
+    environment: 
+      ASPNET_ENVIRONMENTNAME: Prod
 
   frontend:
     build:
