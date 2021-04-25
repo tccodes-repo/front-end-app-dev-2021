@@ -7,12 +7,16 @@ import { Recipients } from 'views/Recipients';
 import { Recipient } from 'views/Recipient';
 import { Templates } from 'views/Templates';
 import { Template } from 'views/Template';
+import { Login } from 'views/Login';
 import './App.scss';
 
 const App: React.FC = () => {
 	return (
 		<Router>
 			<Switch>
+				<Route exact path='/login'>
+					<Login />
+				</Route>
 				<Route exact path='/'>
 					<HomeView />
 				</Route>
