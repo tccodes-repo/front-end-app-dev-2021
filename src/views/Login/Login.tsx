@@ -7,7 +7,7 @@ export const Login: React.FC = props => {
 	return (
 		<AuthFrame>
 			<Panel title='Login' headingLevel='h1'>
-				<p>Use any google account to login</p>
+				<p>Use any Google account to login</p>
 				<Button buttonType='success'>Login with Google</Button>
 			</Panel>
 		</AuthFrame>
