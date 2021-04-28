@@ -16,6 +16,8 @@ export const AuthProvider: React.FC = props => {
 		}
 	};
 
+	const getCurrentUserIDToken = (): string | undefined => authData?.currentUserIdToken;
+
 	// Simple for now and just checks if there is a token present in memory or not
 	const getIsAuthenticated = (): boolean => {
 		return authData.currentUserIdToken !== undefined ? true : false;
@@ -28,7 +30,8 @@ export const AuthProvider: React.FC = props => {
 				currentUserName: authData?.currentUserName,
 				currentUserIdToken: authData?.currentUserIdToken,
 				setCurrentUser,
-				getIsAuthenticated
+				getIsAuthenticated,
+				getCurrentUserIDToken
 			}}
 		>
 			{children}
@@ -43,6 +46,7 @@ const useAuth = () => {
 		currentUserIdToken: string;
 		setCurrentUser: (user: IAuth, redirectLocation: string) => void;
 		getIsAuthenticated: () => boolean;
+		getCurrentUserIDToken: () => string | undefined;
 	} = useContext(AuthContext);
 
 	return authHelpers;
