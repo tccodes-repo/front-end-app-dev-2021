@@ -54,7 +54,7 @@ export const Emails: React.FC = props => {
 			<PageFrame
 				title={'Emails'}
 				ContentRight={() => (
-					<Button buttonType='success' onClick={() => history.push('/emails/email')}>
+					<Button buttonType={'success'} onClick={() => history.push('/emails/email')}>
 						New Email
 					</Button>
 				)}

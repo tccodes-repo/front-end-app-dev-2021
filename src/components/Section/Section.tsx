@@ -2,10 +2,10 @@ import React from 'react';
 import classes from 'classnames';
 import css from './Section.module.scss';
 import { Container } from 'components/Container';
-import { ComponentWithOptionalTitleProps } from 'common/interfaces/ComponentTitles';
+import { IComponentWithOptionalTitleProps } from 'common/interfaces/IComponentTitles';
 import { Header } from 'components/Header';
 
-interface ISectionProps extends ComponentWithOptionalTitleProps {
+interface ISectionProps extends IComponentWithOptionalTitleProps {
 	hasPadding?: boolean;
 }
 

@@ -12,7 +12,7 @@ export const Email: React.FC = props => {
 		<AppFrame>
 			<PageFrame
 				title={'New Email'}
-				ContentRight={() => <Button buttonType='success'>Send Email</Button>}
+				ContentRight={() => <Button buttonType={'success'}>Send Email</Button>}
 			>
 				<Section>
 					<Container>

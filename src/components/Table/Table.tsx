@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from 'classnames';
 import css from './Table.module.scss';
 import { useTable, Column } from 'react-table';
 

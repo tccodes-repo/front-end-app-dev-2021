@@ -12,7 +12,7 @@ export const Recipient: React.FC = props => {
 		<AppFrame>
 			<PageFrame
 				title={'Recipients'}
-				ContentRight={() => <Button buttonType='success'>Save Recipient</Button>}
+				ContentRight={() => <Button buttonType={'success'}>Save Recipient</Button>}
 			>
 				<Section>
 					<Container>

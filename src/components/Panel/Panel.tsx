@@ -1,10 +1,10 @@
 import React from 'react';
 import css from './Panel.module.scss';
 import classes from 'classnames';
-import { ComponentWithOptionalTitleProps } from 'common/interfaces/ComponentTitles';
+import { IComponentWithOptionalTitleProps } from 'common/interfaces/IComponentTitles';
 import { Header } from 'components/Header';
 
-interface IPanelProps extends ComponentWithOptionalTitleProps {
+interface IPanelProps extends IComponentWithOptionalTitleProps {
 	className?: string;
 }
 

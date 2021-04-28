@@ -11,8 +11,8 @@ export const MainNavigation: React.FC = () => {
 			<Navigation />
 			<ul className={css.accountMenu}>
 				<li>
-					<a href='#'>
-						<img src={IconAccount} title='My Account' />
+					<a href='https://google.com'>
+						<img src={IconAccount} title='My Account' alt='My Account' />
 					</a>
 				</li>
 			</ul>

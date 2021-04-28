@@ -45,7 +45,7 @@ export const Recipients: React.FC = props => {
 			{
 				Header: 'Remove',
 				accessor: 'removeLabel',
-				Cell: (row: CellValue) => <a href='#'>{row.value}</a>
+				Cell: (row: CellValue) => <a href='https://google.com'>{row.value}</a>
 			}
 		],
 		[]
@@ -56,7 +56,7 @@ export const Recipients: React.FC = props => {
 			<PageFrame
 				title={'Recipients'}
 				ContentRight={() => (
-					<Button buttonType='success' onClick={() => history.push('/recipients/recipient')}>
+					<Button buttonType={'success'} onClick={() => history.push('/recipients/recipient')}>
 						New Recipient
 					</Button>
 				)}

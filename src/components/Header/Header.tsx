@@ -1,7 +1,7 @@
 import React from 'react';
-import { ComponentWithTitleProps } from 'common/interfaces/ComponentTitles';
+import { IComponentWithTitleProps } from 'common/interfaces/IComponentTitles';
 
-interface IHeaderProps extends ComponentWithTitleProps {
+interface IHeaderProps extends IComponentWithTitleProps {
 	className?: string;
 }
 

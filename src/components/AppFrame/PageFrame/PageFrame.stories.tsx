@@ -29,7 +29,10 @@ export const MainPageFrame = () => (
 );
 
 export const MainPageFrameWithContentRight = () => (
-	<PageFrame title='Header 1' ContentRight={() => <Button buttonType='success'>Send New Email</Button>}>
+	<PageFrame
+		title='Header 1'
+		ContentRight={() => <Button buttonType={'success'}>Send New Email</Button>}
+	>
 		<p>
 			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error alias autem sequi reprehenderit
 			illum id! Reprehenderit in sed delectus, reiciendis ex aperiam a dolore vel saepe nobis laboriosam

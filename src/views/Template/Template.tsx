@@ -12,7 +12,7 @@ export const Template: React.FC = props => {
 		<AppFrame>
 			<PageFrame
 				title={'Templates'}
-				ContentRight={() => <Button buttonType='success'>Save Template</Button>}
+				ContentRight={() => <Button buttonType={'success'}>Save Template</Button>}
 			>
 				<Section>
 					<Container>

@@ -44,7 +44,7 @@ export const Templates: React.FC = props => {
 			{
 				Header: 'Remove',
 				accessor: 'removeLabel',
-				Cell: (row: CellValue) => <a href='#'>{row.value}</a>
+				Cell: (row: CellValue) => <a href='https://google.com'>{row.value}</a>
 			}
 		],
 		[]
@@ -55,7 +55,7 @@ export const Templates: React.FC = props => {
 			<PageFrame
 				title={'Templates'}
 				ContentRight={() => (
-					<Button buttonType='success' onClick={() => history.push('/templates/template')}>
+					<Button buttonType={'success'} onClick={() => history.push('/templates/template')}>
 						New Template
 					</Button>
 				)}

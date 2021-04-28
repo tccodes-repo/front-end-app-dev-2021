@@ -10,9 +10,7 @@ export const Footer: React.FC = props => {
 			<div className={css.topFooter}>
 				<Container>
 					<div className={css.topFooterLayout}>
-						<a href='#'>
-							<Logo />
-						</a>
+						<Logo />
 						<Navigation themeColor={'light'} />
 					</div>
 				</Container>
@@ -21,7 +19,11 @@ export const Footer: React.FC = props => {
 				<Container>
 					<p>
 						TCCOdes FrontEnd App Development |{' '}
-						<a href='https://github.com/tccodes-repo/front-end-app-dev-2021' target='_blank'>
+						<a
+							href='https://github.com/tccodes-repo/front-end-app-dev-2021'
+							target='_blank'
+							rel='noreferrer'
+						>
 							Github Repository
 						</a>
 					</p>
