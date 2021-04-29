@@ -25,7 +25,7 @@ export const Recipient: React.FC = () => {
 				method: 'post',
 				headers: {
 					'Content-Type': 'application/json',
-					Authorization: `Bearer ${currentUserIdToken}}`
+					Authorization: `Bearer ${currentUserIdToken}`
 				},
 				body: JSON.stringify(newRecipient)
 			}),
