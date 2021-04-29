@@ -10,7 +10,7 @@ import { Template } from 'views/Template';
 import { AuthProvider, useAuth } from 'providers/AuthProvider';
 import { Login } from 'views/Login';
 import './App.scss';
-import { useQuery, useMutation, useQueryClient, QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 const queryClient = new QueryClient();
 

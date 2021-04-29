@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppFrame } from 'components/AppFrame';
 import { Container } from 'components/Container';
 import { Panel } from 'components/Panel';
@@ -10,25 +10,39 @@ import { Input } from 'components/Form/Input';
 import { useMutation } from 'react-query';
 import { config } from 'config/config';
 import { useAuth } from 'providers/AuthProvider';
+import { IRecipient } from 'common/interfaces/IRecipient';
 
-export const Recipient: React.FC = props => {
+export const Recipient: React.FC = () => {
+	const [name, setName] = useState<string>('');
+	const [email, setEmail] = useState<string>('');
 	const { getCurrentUserIDToken } = useAuth();
-	const mutationAddRecipient = useMutation(newRecipient =>
-		fetch(`${config.apiBaseUrl}/emailrecipients`, {
-			method: 'POST',
-			headers: {
-				Authorization: `Bearer ${getCurrentUserIDToken()}`
-			},
-			body: JSON.stringify(newRecipient)
-		})
+
+	const mutationCreateRecipient = useMutation(
+		(newRecipient: IRecipient) =>
+			fetch(`${config.apiBaseUrl}/emailrecipients`, {
+				method: 'post',
+				headers: {
+					'Content-Type': 'application/json',
+					Authorization: `Bearer ${getCurrentUserIDToken()}`
+				},
+				body: JSON.stringify(newRecipient)
+			}),
+		{
+			onSuccess: async () => {
+				setName('');
+				setEmail('');
+			}
+		}
 	);
 
 	const addNewRecipient = () => {
-		mutationAddRecipient.mutate({
-			name: 'Laila',
-			email: 'laila@example.com',
-			customer: '6089e147f4110ec4235cce8b'
-		} as any);
+		if (name !== '' && email !== '') {
+			mutationCreateRecipient.mutate({
+				name,
+				email,
+				customer: config.customer
+			});
+		}
 	};
 
 	return (
@@ -44,8 +58,20 @@ export const Recipient: React.FC = props => {
 				<Section>
 					<Container>
 						<Panel>
-							<Input type='text' label='First Name' name='name' />
-							<Input type='text' label='Email' name='email' />
+							<Input
+								type='text'
+								label='Name'
+								name='name'
+								value={name}
+								onChange={event => setName(event.target.value)}
+							/>
+							<Input
+								type='text'
+								label='Email'
+								name='email'
+								value={email}
+								onChange={event => setEmail(event.target.value)}
+							/>
 						</Panel>
 					</Container>
 				</Section>
