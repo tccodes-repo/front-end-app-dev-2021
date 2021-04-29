@@ -7,29 +7,21 @@ import { Table } from 'components/Table';
 import { PageFrame } from 'components/AppFrame/PageFrame/PageFrame';
 import { Section } from 'components/Section';
 import { Button } from 'components/Button';
-import { CellValue } from 'react-table';
+
+import { useQuery } from 'react-query';
+import { config } from 'config/config';
+import { useAuth } from 'providers/AuthProvider/AuthProvider';
 
 export const Recipients: React.FC = props => {
+	const { currentUserIdToken } = useAuth();
 	const history = useHistory();
-	const data = React.useMemo(
-		() => [
-			{
-				name: 'Example Person 1',
-				email: 'example1@example.com',
-				removeLabel: 'remove'
-			},
-			{
-				name: 'Example Person 2',
-				email: 'example2@example.com',
-				removeLabel: 'remove'
-			},
-			{
-				name: 'Example Person 3',
-				email: 'example3@example.com',
-				removeLabel: 'remove'
+	const { data } = useQuery('recipients', () =>
+		fetch(`${config.apiBaseUrl}/emailrecipients`, {
+			method: 'get',
+			headers: {
+				Authorization: `Bearer ${currentUserIdToken}`
 			}
-		],
-		[]
+		}).then(res => res.json())
 	);
 
 	const columns = React.useMemo(
@@ -41,11 +33,6 @@ export const Recipients: React.FC = props => {
 			{
 				Header: 'Email',
 				accessor: 'email'
-			},
-			{
-				Header: 'Remove',
-				accessor: 'removeLabel',
-				Cell: (row: CellValue) => <a href='https://google.com'>{row.value}</a>
 			}
 		],
 		[]

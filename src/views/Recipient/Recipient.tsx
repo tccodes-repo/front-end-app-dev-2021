@@ -11,11 +11,13 @@ import { useMutation } from 'react-query';
 import { config } from 'config/config';
 import { useAuth } from 'providers/AuthProvider';
 import { IRecipient } from 'common/interfaces/IRecipient';
+import { useHistory } from 'react-router-dom';
 
 export const Recipient: React.FC = () => {
+	const history = useHistory();
 	const [name, setName] = useState<string>('');
 	const [email, setEmail] = useState<string>('');
-	const { getCurrentUserIDToken } = useAuth();
+	const { currentUserIdToken } = useAuth();
 
 	const mutationCreateRecipient = useMutation(
 		(newRecipient: IRecipient) =>
@@ -23,7 +25,7 @@ export const Recipient: React.FC = () => {
 				method: 'post',
 				headers: {
 					'Content-Type': 'application/json',
-					Authorization: `Bearer ${getCurrentUserIDToken()}`
+					Authorization: `Bearer ${currentUserIdToken}}`
 				},
 				body: JSON.stringify(newRecipient)
 			}),
@@ -31,6 +33,7 @@ export const Recipient: React.FC = () => {
 			onSuccess: async () => {
 				setName('');
 				setEmail('');
+				history.push('/recipients');
 			}
 		}
 	);
